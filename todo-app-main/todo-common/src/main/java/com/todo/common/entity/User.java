@@ -1,5 +1,10 @@
 package com.todo.common.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity(name = "User")
+@Table(name = "user")
 public class User extends BaseEntity {
 	private String userName;
 	private String firstName;

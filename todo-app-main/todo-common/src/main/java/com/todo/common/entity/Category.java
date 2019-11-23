@@ -1,5 +1,10 @@
 package com.todo.common.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity(name = "Category")
+@Table(name = "category")
 public class Category extends BaseEntity {
 	private String description;
 

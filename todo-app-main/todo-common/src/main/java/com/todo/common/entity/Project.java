@@ -2,6 +2,11 @@ package com.todo.common.entity;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity(name = "Project")
+@Table(name = "project")
 public class Project extends BaseEntity{
 	private Date date;
 	private Date time;

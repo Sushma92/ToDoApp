@@ -1,5 +1,10 @@
 package com.todo.common.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity(name = "ProjectTaskInfo")
+@Table(name = "project_task_info")
 public class ProjectTaskInfo extends BaseEntity{
 	private Integer projectID;
 	private Integer userID;
