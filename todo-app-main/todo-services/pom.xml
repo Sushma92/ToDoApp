@@ -25,6 +25,11 @@
 			<version>${spring.boot.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>sushma.busapps</groupId>
+			<artifactId>todo-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 
 	</dependencies>
 </project>

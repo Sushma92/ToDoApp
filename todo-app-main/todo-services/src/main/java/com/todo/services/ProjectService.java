@@ -2,29 +2,31 @@ package com.todo.services;
 
 import org.springframework.stereotype.Service;
 
+import com.todo.common.entity.Project;
+
 @Service
-public class ProjectService extends BaseService{
+public class ProjectService extends BaseService<Project, Project>{
 
 	@Override
-	public void create() {
+	public Project create(Project project) {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
 
 	@Override
-	public void update() {
+	public Project update(Project project) {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
 
 	@Override
-	public void read() {
+	public Project read() {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
 
 	@Override
-	public void delete() {
+	public void delete(Integer id) {
 		// TODO Auto-generated method stub
 		
 	}
