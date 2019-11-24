@@ -20,7 +20,7 @@ public class User extends BaseEntity {
 	@Column(name = "email_id", length = 50)
 	private String emailId;
 
-	@Column(name = "phone_number", length = 25)
+	@Column(name = "phone_number", length = 50)
 	private String phoneNumber;
 
 	public String getUserName() {

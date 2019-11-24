@@ -10,8 +10,8 @@ import javax.persistence.Table;
 @Table(name = "task")
 public class Task extends BaseEntity {
 
-	@Column(name = "user_id")
-	private Long userId;
+	@Column(name = "task_name", length = 50)
+	private String taskName;
 
 	@Column(name = "task_date")
 	private Date taskDate;
@@ -22,24 +22,15 @@ public class Task extends BaseEntity {
 	@Column(name = "task_minute")
 	private Integer taskMinute;
 
-	@Column(name = "task_second")
-	private Integer taskSecond;
+	@Column(name = "task_seconds")
+	private Integer taskSeconds;
 
-	@Column(name = "description", length = 1000)
-	private String description;
-
-	@Column(name = "priority")
-	private Integer priority;
-
-	@Column(name = "category_id")
-	private Long categoryId;
-
-	public Long getUserId() {
-		return userId;
+	public String getTaskName() {
+		return taskName;
 	}
 
-	public void setUserId(Long userId) {
-		this.userId = userId;
+	public void setTaskName(String taskName) {
+		this.taskName = taskName;
 	}
 
 	public Date getTaskDate() {
@@ -66,36 +57,12 @@ public class Task extends BaseEntity {
 		this.taskMinute = taskMinute;
 	}
 
-	public Integer getTaskSecond() {
-		return taskSecond;
+	public Integer getTaskSeconds() {
+		return taskSeconds;
 	}
 
-	public void setTaskSecond(Integer taskSecond) {
-		this.taskSecond = taskSecond;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public Integer getPriority() {
-		return priority;
-	}
-
-	public void setPriority(Integer priority) {
-		this.priority = priority;
-	}
-
-	public Long getCategoryId() {
-		return categoryId;
-	}
-
-	public void setCategoryId(Long categoryId) {
-		this.categoryId = categoryId;
+	public void setTaskSeconds(Integer taskSeconds) {
+		this.taskSeconds = taskSeconds;
 	}
 
 }

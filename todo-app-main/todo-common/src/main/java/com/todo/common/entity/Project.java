@@ -10,14 +10,33 @@ import javax.persistence.Table;
 @Table(name = "project")
 public class Project extends BaseEntity {
 
+	@Column(name = "project_name", length = 50)
+	private String projectName;
+
 	@Column(name = "start_date")
 	private Date startDate;
 
 	@Column(name = "end_date")
 	private Date endDate;
 
-	@Column(name = "description", length = 1000)
-	private String description;
+	@Column(name = "project_description", length = 1000)
+	private String projectDescription;
+
+	public String getProjectDescription() {
+		return projectDescription;
+	}
+
+	public void setProjectDescription(String projectDescription) {
+		this.projectDescription = projectDescription;
+	}
+
+	public String getProjectName() {
+		return projectName;
+	}
+
+	public void setProjectName(String projectName) {
+		this.projectName = projectName;
+	}
 
 	public Date getStartDate() {
 		return startDate;
@@ -33,14 +52,6 @@ public class Project extends BaseEntity {
 
 	public void setEndDate(Date endDate) {
 		this.endDate = endDate;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
 	}
 
 }

@@ -7,6 +7,7 @@ import com.todo.common.entity.User;
 
 @RestController
 @RequestMapping(path = "/api/services/todo-app/user")
+
 public class UserController extends BaseController<User, User>{
 
 }
