@@ -2,47 +2,45 @@ package com.todo.common.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity(name = "Project")
 @Table(name = "project")
-public class Project extends BaseEntity{
-	private Date date;
-	private Date time;
-	private String projectStatus;
+public class Project extends BaseEntity {
 
-	private String projectDescription;
+	@Column(name = "start_date")
+	private Date startDate;
 
-	public Date getDate() {
-		return date;
+	@Column(name = "end_date")
+	private Date endDate;
+
+	@Column(name = "description", length = 1000)
+	private String description;
+
+	public Date getStartDate() {
+		return startDate;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
 	}
 
-	public Date getTime() {
-		return time;
+	public Date getEndDate() {
+		return endDate;
 	}
 
-	public void setTime(Date time) {
-		this.time = time;
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
 	}
 
-	public String getProjectStatus() {
-		return projectStatus;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setProjectStatus(String projectStatus) {
-		this.projectStatus = projectStatus;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
-	public String getProjectDescription() {
-		return projectDescription;
-	}
-
-	public void setProjectDescription(String projectDescription) {
-		this.projectDescription = projectDescription;
-	}
 }

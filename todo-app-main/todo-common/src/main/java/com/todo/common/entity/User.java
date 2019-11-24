@@ -1,15 +1,26 @@
 package com.todo.common.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity(name = "User")
 @Table(name = "user")
 public class User extends BaseEntity {
+
+	@Column(name = "user_name", length = 100)
 	private String userName;
+
+	@Column(name = "first_name", length = 50)
 	private String firstName;
+
+	@Column(name = "last_name", length = 50)
 	private String lastName;
-	private String emailID;
+
+	@Column(name = "email_id", length = 50)
+	private String emailId;
+
+	@Column(name = "phone_number", length = 25)
 	private String phoneNumber;
 
 	public String getUserName() {
@@ -36,12 +47,12 @@ public class User extends BaseEntity {
 		this.lastName = lastName;
 	}
 
-	public String getEmailID() {
-		return emailID;
+	public String getEmailId() {
+		return emailId;
 	}
 
-	public void setEmailID(String emailID) {
-		this.emailID = emailID;
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
 	}
 
 	public String getPhoneNumber() {

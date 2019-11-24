@@ -2,50 +2,76 @@ package com.todo.common.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity(name = "Task")
 @Table(name = "task")
 public class Task extends BaseEntity {
-	private Integer userID;
-	private Date date;
-	private Date time;
-	private String taskStatus;
+
+	@Column(name = "user_id")
+	private Long userId;
+
+	@Column(name = "task_date")
+	private Date taskDate;
+
+	@Column(name = "task_hour")
+	private Integer taskHour;
+
+	@Column(name = "task_minute")
+	private Integer taskMinute;
+
+	@Column(name = "task_second")
+	private Integer taskSecond;
+
+	@Column(name = "description", length = 1000)
 	private String description;
-	private String priority;
-	private Integer categoryID;
 
-	public Integer getUserID() {
-		return userID;
+	@Column(name = "priority")
+	private Integer priority;
+
+	@Column(name = "category_id")
+	private Long categoryId;
+
+	public Long getUserId() {
+		return userId;
 	}
 
-	public void setUserID(Integer userID) {
-		this.userID = userID;
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 
-	public Date getDate() {
-		return date;
+	public Date getTaskDate() {
+		return taskDate;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public void setTaskDate(Date taskDate) {
+		this.taskDate = taskDate;
 	}
 
-	public Date getTime() {
-		return time;
+	public Integer getTaskHour() {
+		return taskHour;
 	}
 
-	public void setTime(Date time) {
-		this.time = time;
+	public void setTaskHour(Integer taskHour) {
+		this.taskHour = taskHour;
 	}
 
-	public String getTaskStatus() {
-		return taskStatus;
+	public Integer getTaskMinute() {
+		return taskMinute;
 	}
 
-	public void setTaskStatus(String taskStatus) {
-		this.taskStatus = taskStatus;
+	public void setTaskMinute(Integer taskMinute) {
+		this.taskMinute = taskMinute;
+	}
+
+	public Integer getTaskSecond() {
+		return taskSecond;
+	}
+
+	public void setTaskSecond(Integer taskSecond) {
+		this.taskSecond = taskSecond;
 	}
 
 	public String getDescription() {
@@ -56,11 +82,20 @@ public class Task extends BaseEntity {
 		this.description = description;
 	}
 
-	public String getPriority() {
+	public Integer getPriority() {
 		return priority;
 	}
 
-	public void setPriority(String priority) {
+	public void setPriority(Integer priority) {
 		this.priority = priority;
 	}
+
+	public Long getCategoryId() {
+		return categoryId;
+	}
+
+	public void setCategoryId(Long categoryId) {
+		this.categoryId = categoryId;
+	}
+
 }
