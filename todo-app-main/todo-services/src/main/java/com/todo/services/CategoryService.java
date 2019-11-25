@@ -35,4 +35,9 @@ public class CategoryService extends BaseService<Category, Category> {
 		categoryDao.deleteById(id);
 	}
 
+	@Override
+	public void generateMultiple(Integer noOfEntities) {
+		
+	}
+
 }

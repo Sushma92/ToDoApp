@@ -26,5 +26,10 @@ public class TaskServiceImpl extends BaseService<Task, Task> {
 	public void delete(Long id) {
 		
 	}
+
+	@Override
+	public void generateMultiple(Integer noOfEntities) {
+		
+	}
 	
 }

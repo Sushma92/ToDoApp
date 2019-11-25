@@ -27,4 +27,9 @@ public class UserServiceImpl extends BaseService<User, User> {
 
 	}
 
+	@Override
+	public void generateMultiple(Integer noOfEntities) {
+		
+	}
+
 }

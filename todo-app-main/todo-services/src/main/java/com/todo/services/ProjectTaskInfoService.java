@@ -27,4 +27,9 @@ public class ProjectTaskInfoService extends BaseService<ProjectTaskInfo, Project
 
 	}
 
+	@Override
+	public void generateMultiple(Integer noOfEntities) {
+		
+	}
+
 }

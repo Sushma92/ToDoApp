@@ -27,4 +27,9 @@ public class ProjectService extends BaseService<Project, Project> {
 
 	}
 
+	@Override
+	public void generateMultiple(Integer noOfEntities) {
+
+	}
+
 }
