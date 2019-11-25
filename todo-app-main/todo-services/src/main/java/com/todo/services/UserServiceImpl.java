@@ -9,25 +9,21 @@ public class UserServiceImpl extends BaseService<User, User> {
 
 	@Override
 	public User create(User user) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public User update(User user) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public User read() {
-		// TODO Auto-generated method stub
+	public User read(Long id) {
 		return null;
 	}
 
 	@Override
-	public void delete(Integer userID) {
-		// TODO Auto-generated method stub
+	public void delete(Long userID) {
 
 	}
 

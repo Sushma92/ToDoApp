@@ -8,8 +8,8 @@ public abstract class BaseService<E extends BaseEntity, R> {
 
 	public abstract R update(E entity);
 
-	public abstract E read();
+	public abstract E read(Long id);
 
-	public abstract void delete(Integer id);
+	public abstract void delete(Long id);
 
 }

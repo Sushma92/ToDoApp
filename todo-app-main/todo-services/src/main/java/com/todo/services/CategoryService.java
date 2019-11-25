@@ -1,35 +1,38 @@
 package com.todo.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.todo.common.entity.Category;
-import com.todo.common.entity.User;
+import com.todo.dao.CategoryDAO;
 
 @Service
-public class CategoryService extends BaseService<Category, Category>{
+public class CategoryService extends BaseService<Category, Category> {
+
+	@Autowired
+	CategoryDAO categoryDao;
 
 	@Override
 	public Category create(Category category) {
-		// TODO Auto-generated method stub
-		return null;
+		category = categoryDao.save(category);
+		return category;
 	}
 
 	@Override
 	public Category update(Category category) {
-		// TODO Auto-generated method stub
-		return null;
+		category = categoryDao.save(category);
+		return category;
 	}
 
 	@Override
-	public Category read() {
-		// TODO Auto-generated method stub
-		return null;
+	public Category read(Long id) {
+		Category category = categoryDao.findById(id).orElse(null);
+		return category;
 	}
 
 	@Override
-	public void delete(Integer id) {
-		// TODO Auto-generated method stub
-		
+	public void delete(Long id) {
+		categoryDao.deleteById(id);
 	}
 
 }

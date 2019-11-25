@@ -1,13 +1,9 @@
 package com.todo.dao;
 
+import org.springframework.stereotype.Repository;
+
 import com.todo.common.entity.ProjectTaskInfo;
 
+@Repository
 public interface ProjectTaskInfoDAO extends BaseDAO<ProjectTaskInfo, ProjectTaskInfo> {
-	public ProjectTaskInfo create(ProjectTaskInfo projectTaskInfo);
-
-	public ProjectTaskInfo update(ProjectTaskInfo projectTaskInfo);
-
-	public ProjectTaskInfo read();
-
-	public void delete(Integer id);
 }
